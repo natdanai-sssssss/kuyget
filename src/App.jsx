@@ -1,17 +1,27 @@
+import React from 'react'; 
+
+import { Provider } from 'react-redux'; 
+
+import store from './Store'; 
+
 import AppRouter from './AppRouter'; 
+
+ 
 
 function App() { 
 
   return ( 
 
-    <div> 
+    <Provider store={store}> 
 
       <AppRouter /> 
 
-    </div> 
+    </Provider> 
 
   ); 
 
 } 
+
+ 
 
 export default App; 

@@ -1,10 +1,10 @@
+import React from 'react'; 
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 
-import Home from './pages/Home'; 
+import Products from './pages/Products'; 
 
-import Product from './pages/Product';  // Dynamic route for product 
-
-import User from './pages/User';        // Dynamic route for user 
+import ProductDetail from './pages/ProductDetail'; 
 
  
 
@@ -16,15 +16,9 @@ function AppRouter() {
 
       <Routes> 
 
-        <Route path="/" element={<Home />} /> 
+        <Route path="/" element={<Products />} /> 
 
-        {/* Dynamic Route for product */} 
-
-        <Route path="/product/:productId" element={<Product />} /> 
-
-        {/* Dynamic Route for user */} 
-
-        <Route path="/user/:userId" element={<User />} /> 
+        <Route path="/product/:productId" element={<ProductDetail />} /> 
 
       </Routes> 
 
